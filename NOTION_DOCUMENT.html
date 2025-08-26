@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoodCare - Notion Document</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #37352F;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 { font-size: 40px; margin: 30px 0 10px; }
+        h2 { font-size: 30px; margin: 25px 0 10px; color: #37352F; }
+        h3 { font-size: 24px; margin: 20px 0 10px; color: #37352F; }
+        h4 { font-size: 20px; margin: 15px 0 10px; color: #37352F; }
+        .emoji { font-size: 1.2em; }
+        .callout {
+            padding: 16px;
+            border-radius: 3px;
+            margin: 16px 0;
+        }
+        .callout-info { background: #F1F8FF; border-left: 4px solid #0969DA; }
+        .callout-success { background: #F0FDF4; border-left: 4px solid #22C55E; }
+        .callout-warning { background: #FFFBEB; border-left: 4px solid #F59E0B; }
+        .toggle { 
+            border: 1px solid #E5E7EB;
+            border-radius: 3px;
+            margin: 8px 0;
+            padding: 12px;
+        }
+        .toggle-header {
+            cursor: pointer;
+            font-weight: 500;
+        }
+        .database-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        .database-table th {
+            background: #F7F6F3;
+            padding: 8px;
+            text-align: left;
+            border: 1px solid #E5E7EB;
+        }
+        .database-table td {
+            padding: 8px;
+            border: 1px solid #E5E7EB;
+        }
+        .tag {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 3px;
+            font-size: 14px;
+            margin: 2px;
+        }
+        .tag-blue { background: #E6F3FF; color: #0969DA; }
+        .tag-green { background: #F0FDF4; color: #16A34A; }
+        .tag-purple { background: #F3E8FF; color: #9333EA; }
+        .tag-orange { background: #FFF7ED; color: #EA580C; }
+        code {
+            background: #F7F6F3;
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+        }
+        pre {
+            background: #F7F6F3;
+            padding: 16px;
+            border-radius: 3px;
+            overflow-x: auto;
+        }
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: #E5E7EB;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #4A90E2, #9B59B6);
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <h1><span class="emoji">🌟</span> MoodCare - AI 감정케어 앱 프로젝트</h1>
+    
+    <div class="callout callout-info">
+        <strong>📌 Quick Links</strong><br>
+        • API Repository: <a href="https://github.com/dugadak/moodcare-api">moodcare-api</a><br>
+        • APP Repository: <a href="https://github.com/dugadak/moodcare-app">moodcare-app</a><br>
+        • 프로젝트 상태: <span class="tag tag-green">개발 중</span>
+    </div>
+
+    <h2>📋 프로젝트 개요</h2>
+    
+    <table class="database-table">
+        <tr>
+            <th width="30%">항목</th>
+            <th>내용</th>
+        </tr>
+        <tr>
+            <td><strong>프로젝트명</strong></td>
+            <td>MoodCare (무드케어)</td>
+        </tr>
+        <tr>
+            <td><strong>설명</strong></td>
+            <td>AI 기반 감정 분석 및 맞춤형 케어 솔루션을 제공하는 모바일 애플리케이션</td>
+        </tr>
+        <tr>
+            <td><strong>목표</strong></td>
+            <td>
+                • 사용자의 일상 감정을 기록하고 추적<br>
+                • AI를 통한 감정 패턴 분석 및 인사이트 제공<br>
+                • 맞춤형 감정 케어 콘텐츠 및 활동 추천<br>
+                • 정신 건강 개선을 위한 체계적인 지원
+            </td>
+        </tr>
+        <tr>
+            <td><strong>타겟 사용자</strong></td>
+            <td>
+                <span class="tag tag-blue">20-30대 직장인</span>
+                <span class="tag tag-purple">대학생</span>
+                <span class="tag tag-orange">육아맘</span>
+            </td>
+        </tr>
+    </table>
+
+    <h2>🎯 핵심 기능</h2>
+    
+    <div class="toggle">
+        <div class="toggle-header">▶ 1. AI 감정·기분 기록</div>
+        <div class="toggle-content">
+            <h4>일일 감정 체크인</h4>
+            <ul>
+                <li>간단한 이모티콘 선택</li>
+                <li>상세 감정 일기 작성</li>
+                <li>음성 메모 기능</li>
+            </ul>
+            <h4>AI 감정 분석</h4>
+            <ul>
+                <li>텍스트 감정 분석</li>
+                <li>감정 패턴 인식</li>
+                <li>트리거 요인 파악</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="toggle">
+        <div class="toggle-header">▶ 2. 맞춤형 추천 시스템</div>
+        <div class="toggle-content">
+            <h4>활동 추천</h4>
+            <ul>
+                <li>감정 상태에 따른 활동 제안</li>
+                <li>명상, 운동, 호흡법 가이드</li>
+                <li>음악, 영상 콘텐츠 추천</li>
+            </ul>
+            <h4>AI 챗봇 상담</h4>
+            <ul>
+                <li>24/7 감정 지원 챗봇</li>
+                <li>공감적 대화 제공</li>
+                <li>전문 상담 연계 안내</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="toggle">
+        <div class="toggle-header">▶ 3. 통계 및 인사이트</div>
+        <div class="toggle-content">
+            <h4>감정 트렌드 분석</h4>
+            <ul>
+                <li>주간/월간 감정 그래프</li>
+                <li>감정 변화 패턴 시각화</li>
+                <li>주요 영향 요인 분석</li>
+            </ul>
+            <h4>개인화된 리포트</h4>
+            <ul>
+                <li>월간 감정 건강 리포트</li>
+                <li>개선 제안 사항</li>
+                <li>목표 설정 및 추적</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="toggle">
+        <div class="toggle-header">▶ 4. 커뮤니티 기능</div>
+        <div class="toggle-content">
+            <h4>익명 공유</h4>
+            <ul>
+                <li>감정 일기 익명 공유</li>
+                <li>서로 응원하기</li>
+                <li>공감 버튼</li>
+            </ul>
+            <h4>그룹 세션</h4>
+            <ul>
+                <li>테마별 그룹 활동</li>
+                <li>온라인 명상 세션</li>
+                <li>감정 관리 워크샵</li>
+            </ul>
+        </div>
+    </div>
+
+    <h2>🛠 기술 스택</h2>
+    
+    <table class="database-table">
+        <tr>
+            <th>구분</th>
+            <th>기술</th>
+            <th>상세</th>
+        </tr>
+        <tr>
+            <td rowspan="6"><strong>Frontend</strong></td>
+            <td>Framework</td>
+            <td>Flutter 3.x</td>
+        </tr>
+        <tr>
+            <td>상태 관리</td>
+            <td>Provider / Riverpod</td>
+        </tr>
+        <tr>
+            <td>로컬 저장소</td>
+            <td>Hive / SQLite</td>
+        </tr>
+        <tr>
+            <td>UI/UX</td>
+            <td>Material Design 3</td>
+        </tr>
+        <tr>
+            <td>차트</td>
+            <td>FL Chart</td>
+        </tr>
+        <tr>
+            <td>애니메이션</td>
+            <td>Lottie, Flutter Animate</td>
+        </tr>
+        <tr>
+            <td rowspan="5"><strong>Backend</strong></td>
+            <td>Framework</td>
+            <td>FastAPI (Python 3.11+)</td>
+        </tr>
+        <tr>
+            <td>데이터베이스</td>
+            <td>PostgreSQL + Redis</td>
+        </tr>
+        <tr>
+            <td>AI/ML</td>
+            <td>OpenAI GPT-4, Hugging Face, TensorFlow</td>
+        </tr>
+        <tr>
+            <td>인증</td>
+            <td>JWT + OAuth2</td>
+        </tr>
+        <tr>
+            <td>배포</td>
+            <td>Docker + AWS/GCP</td>
+        </tr>
+        <tr>
+            <td rowspan="4"><strong>인프라</strong></td>
+            <td>클라우드</td>
+            <td>AWS / Google Cloud</td>
+        </tr>
+        <tr>
+            <td>CI/CD</td>
+            <td>GitHub Actions</td>
+        </tr>
+        <tr>
+            <td>모니터링</td>
+            <td>Sentry, CloudWatch</td>
+        </tr>
+        <tr>
+            <td>분석</td>
+            <td>Google Analytics, Mixpanel</td>
+        </tr>
+    </table>
+
+    <h2>📱 주요 화면 구성</h2>
+    
+    <table class="database-table">
+        <tr>
+            <th>화면</th>
+            <th>설명</th>
+            <th>주요 기능</th>
+        </tr>
+        <tr>
+            <td><strong>온보딩</strong></td>
+            <td>앱 소개 및 초기 설정</td>
+            <td>• 앱 소개<br>• 개인정보 동의<br>• 초기 감정 설정</td>
+        </tr>
+        <tr>
+            <td><strong>홈 대시보드</strong></td>
+            <td>메인 화면</td>
+            <td>• 오늘의 감정 체크인<br>• 추천 활동<br>• 감정 트렌드</td>
+        </tr>
+        <tr>
+            <td><strong>감정 기록</strong></td>
+            <td>감정 입력 화면</td>
+            <td>• 감정 선택<br>• 일기 작성<br>• 태그 추가</td>
+        </tr>
+        <tr>
+            <td><strong>AI 챗봇</strong></td>
+            <td>AI 상담 화면</td>
+            <td>• 대화형 인터페이스<br>• 감정 분석<br>• 추천 응답</td>
+        </tr>
+        <tr>
+            <td><strong>통계</strong></td>
+            <td>분석 화면</td>
+            <td>• 감정 차트<br>• 패턴 분석<br>• 월간 리포트</td>
+        </tr>
+        <tr>
+            <td><strong>커뮤니티</strong></td>
+            <td>소셜 기능</td>
+            <td>• 익명 피드<br>• 그룹 활동<br>• 응원 메시지</td>
+        </tr>
+        <tr>
+            <td><strong>설정</strong></td>
+            <td>앱 설정</td>
+            <td>• 프로필 관리<br>• 알림 설정<br>• 데이터 백업</td>
+        </tr>
+    </table>
+
+    <h2>🗓 개발 로드맵</h2>
+    
+    <div class="callout callout-success">
+        <strong>Phase 1: MVP (8주)</strong>
+        <div class="progress-bar">
+            <div class="progress-fill" style="width: 0%;"></div>
+        </div>
+        <br>
+        • Week 1-2: 프로젝트 설정 및 기본 구조<br>
+        • Week 3-4: 백엔드 기초 (인증, CRUD)<br>
+        • Week 5-6: 프론트엔드 기초 (로그인, 감정 기록)<br>
+        • Week 7-8: 통합 및 테스트
+    </div>
+
+    <div class="callout callout-warning">
+        <strong>Phase 2: Beta (8주)</strong>
+        <div class="progress-bar">
+            <div class="progress-fill" style="width: 0%;"></div>
+        </div>
+        <br>
+        • Week 9-10: AI 통합 (GPT API, 감정 분석)<br>
+        • Week 11-12: 데이터 시각화 (차트, 대시보드)<br>
+        • Week 13-14: 콘텐츠 시스템 (명상, 활동)<br>
+        • Week 15-16: 베타 테스트
+    </div>
+
+    <div class="callout callout-info">
+        <strong>Phase 3: 정식 출시 (4주)</strong>
+        <div class="progress-bar">
+            <div class="progress-fill" style="width: 0%;"></div>
+        </div>
+        <br>
+        • Week 17-18: 커뮤니티 기능<br>
+        • Week 19-20: 최종 준비<br>
+        • Week 21-22: 출시 및 모니터링
+    </div>
+
+    <h2>💰 비즈니스 모델</h2>
+    
+    <table class="database-table">
+        <tr>
+            <th>플랜</th>
+            <th>가격</th>
+            <th>기능</th>
+        </tr>
+        <tr>
+            <td><strong>Free</strong></td>
+            <td>무료</td>
+            <td>
+                • 기본 감정 기록 (일 3회)<br>
+                • AI 챗봇 (일 10 메시지)<br>
+                • 기본 통계<br>
+                • 커뮤니티 접근
+            </td>
+        </tr>
+        <tr>
+            <td><strong>Premium</strong></td>
+            <td>월 9,900원</td>
+            <td>
+                • 무제한 감정 기록<br>
+                • 무제한 AI 챗봇<br>
+                • 고급 분석 및 리포트<br>
+                • 모든 콘텐츠 접근<br>
+                • 광고 제거
+            </td>
+        </tr>
+        <tr>
+            <td><strong>Professional</strong></td>
+            <td>월 19,900원</td>
+            <td>
+                • Premium 모든 기능<br>
+                • 전문가 상담 연계 (월 1회)<br>
+                • 그룹 프로그램 우선 참여<br>
+                • 개인 맞춤 코칭<br>
+                • 데이터 export 기능
+            </td>
+        </tr>
+        <tr>
+            <td><strong>Enterprise</strong></td>
+            <td>별도 문의</td>
+            <td>
+                • 기업 직원 복지 프로그램<br>
+                • 단체 라이선스<br>
+                • 맞춤형 대시보드<br>
+                • 조직 건강도 리포트
+            </td>
+        </tr>
+    </table>
+
+    <h2>📊 데이터베이스 스키마</h2>
+    
+    <pre><code>-- Users Table
+CREATE TABLE users (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    email VARCHAR(255) UNIQUE NOT NULL,
+    username VARCHAR(100) UNIQUE NOT NULL,
+    password_hash VARCHAR(255) NOT NULL,
+    profile JSONB DEFAULT '{}',
+    settings JSONB DEFAULT '{}',
+    subscription_tier VARCHAR(50) DEFAULT 'free',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    last_login_at TIMESTAMP,
+    is_active BOOLEAN DEFAULT true,
+    is_verified BOOLEAN DEFAULT false
+);
+
+-- Emotions Table
+CREATE TABLE emotions (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    user_id UUID REFERENCES users(id) ON DELETE CASCADE,
+    emotion_type VARCHAR(50) NOT NULL,
+    intensity INTEGER CHECK (intensity >= 1 AND intensity <= 10),
+    sub_emotions JSONB DEFAULT '[]',
+    note TEXT,
+    voice_note_url VARCHAR(500),
+    images JSONB DEFAULT '[]',
+    context JSONB DEFAULT '{}',
+    ai_analysis JSONB DEFAULT '{}',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- AI Conversations Table
+CREATE TABLE ai_conversations (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    user_id UUID REFERENCES users(id) ON DELETE CASCADE,
+    session_id UUID NOT NULL,
+    messages JSONB NOT NULL DEFAULT '[]',
+    sentiment_summary JSONB,
+    recommendations JSONB DEFAULT '[]',
+    effectiveness_score FLOAT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    ended_at TIMESTAMP
+);
+
+-- Recommendations Table
+CREATE TABLE recommendations (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    user_id UUID REFERENCES users(id) ON DELETE CASCADE,
+    type VARCHAR(50) NOT NULL,
+    content JSONB NOT NULL,
+    trigger_emotion VARCHAR(50),
+    trigger_context JSONB,
+    was_helpful BOOLEAN,
+    feedback TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    interacted_at TIMESTAMP
+);
+
+-- Community Posts Table
+CREATE TABLE community_posts (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    user_id UUID REFERENCES users(id) ON DELETE CASCADE,
+    anonymous_name VARCHAR(100) NOT NULL,
+    emotion_tags JSONB NOT NULL DEFAULT '[]',
+    content TEXT NOT NULL,
+    support_count INTEGER DEFAULT 0,
+    is_flagged BOOLEAN DEFAULT false,
+    is_hidden BOOLEAN DEFAULT false,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);</code></pre>
+
+    <h2>🔐 보안 및 개인정보</h2>
+    
+    <div class="callout callout-warning">
+        <strong>⚠️ 중요 보안 사항</strong><br>
+        • <strong>데이터 암호화</strong>: AES-256 암호화<br>
+        • <strong>HTTPS 통신</strong>: SSL/TLS 인증서<br>
+        • <strong>개인정보 익명화</strong>: 커뮤니티 공유 시 자동 익명화<br>
+        • <strong>GDPR/CCPA 준수</strong>: 데이터 삭제 요청 처리<br>
+        • <strong>정기 보안 감사</strong>: 분기별 보안 점검
+    </div>
+
+    <h2>📈 성공 지표 (KPI)</h2>
+    
+    <table class="database-table">
+        <tr>
+            <th>카테고리</th>
+            <th>지표</th>
+            <th>목표</th>
+        </tr>
+        <tr>
+            <td rowspan="3"><strong>사용자 지표</strong></td>
+            <td>MAU (월간 활성 사용자)</td>
+            <td>300,000명</td>
+        </tr>
+        <tr>
+            <td>DAU (일간 활성 사용자)</td>
+            <td>50,000명</td>
+        </tr>
+        <tr>
+            <td>30일 리텐션율</td>
+            <td>40%</td>
+        </tr>
+        <tr>
+            <td rowspan="3"><strong>참여 지표</strong></td>
+            <td>일일 감정 기록률</td>
+            <td>70%</td>
+        </tr>
+        <tr>
+            <td>AI 챗봇 사용 빈도</td>
+            <td>주 3회</td>
+        </tr>
+        <tr>
+            <td>커뮤니티 참여율</td>
+            <td>30%</td>
+        </tr>
+        <tr>
+            <td rowspan="3"><strong>수익 지표</strong></td>
+            <td>유료 전환율</td>
+            <td>5%</td>
+        </tr>
+        <tr>
+            <td>ARPU</td>
+            <td>₩2,000</td>
+        </tr>
+        <tr>
+            <td>LTV</td>
+            <td>₩50,000</td>
+        </tr>
+    </table>
+
+    <h2>👥 팀 구성</h2>
+    
+    <table class="database-table">
+        <tr>
+            <th>역할</th>
+            <th>인원</th>
+            <th>담당 업무</th>
+        </tr>
+        <tr>
+            <td><strong>Product Manager</strong></td>
+            <td>1명</td>
+            <td>제품 전략, 로드맵 관리</td>
+        </tr>
+        <tr>
+            <td><strong>Backend Developer</strong></td>
+            <td>2명</td>
+            <td>API 개발, 서버 관리</td>
+        </tr>
+        <tr>
+            <td><strong>Frontend Developer</strong></td>
+            <td>2명</td>
+            <td>Flutter 앱 개발</td>
+        </tr>
+        <tr>
+            <td><strong>AI/ML Engineer</strong></td>
+            <td>1명</td>
+            <td>AI 모델 개발 및 최적화</td>
+        </tr>
+        <tr>
+            <td><strong>UI/UX Designer</strong></td>
+            <td>1명</td>
+            <td>디자인 시스템, 사용자 경험</td>
+        </tr>
+        <tr>
+            <td><strong>Content Creator</strong></td>
+            <td>1명</td>
+            <td>콘텐츠 제작, 커뮤니티 관리</td>
+        </tr>
+        <tr>
+            <td><strong>Marketing Manager</strong></td>
+            <td>1명</td>
+            <td>마케팅 전략, 성장 해킹</td>
+        </tr>
+    </table>
+
+    <h2>📞 프로젝트 정보</h2>
+    
+    <div class="callout callout-info">
+        <strong>📌 Contact Information</strong><br>
+        • <strong>프로젝트명</strong>: MoodCare<br>
+        • <strong>이메일</strong>: contact@moodcare.app<br>
+        • <strong>GitHub API</strong>: <a href="https://github.com/dugadak/moodcare-api">https://github.com/dugadak/moodcare-api</a><br>
+        • <strong>GitHub APP</strong>: <a href="https://github.com/dugadak/moodcare-app">https://github.com/dugadak/moodcare-app</a><br>
+        • <strong>작성일</strong>: 2025-01-25<br>
+        • <strong>버전</strong>: 1.0
+    </div>
+
+    <script>
+        // Toggle 기능 구현
+        document.querySelectorAll('.toggle-header').forEach(header => {
+            header.addEventListener('click', () => {
+                const content = header.nextElementSibling;
+                const arrow = header.textContent.substring(0, 1);
+                if (arrow === '▶') {
+                    header.textContent = '▼' + header.textContent.substring(1);
+                    content.style.display = 'block';
+                } else {
+                    header.textContent = '▶' + header.textContent.substring(1);
+                    content.style.display = 'none';
+                }
+            });
+            // 초기 상태는 닫혀있음
+            header.nextElementSibling.style.display = 'none';
+        });
+    </script>
+</body>
+</html>

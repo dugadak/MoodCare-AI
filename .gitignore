@@ -1,0 +1,105 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environment
+venv/
+ENV/
+env/
+.venv
+
+# Django
+*.log
+*.pot
+*.pyc
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+media/
+staticfiles/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Flutter/Dart
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+/build/
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# Flutter specific
+moodcare_app/ios/Flutter/.last_build_id
+moodcare_app/ios/Pods/
+moodcare_app/ios/Runner.xcworkspace/
+moodcare_app/android/.gradle/
+moodcare_app/android/app/debug/
+moodcare_app/android/app/profile/
+moodcare_app/android/app/release/
+moodcare_app/android/local.properties
+moodcare_app/android/key.properties
+
+# Miscellaneous
+.sass-cache/
+.connect.dart_tool/
+.packages
+.pub-cache/
+.pub/
+coverage/
+*.log
+.history
+.svn/
+
+# Web related
+moodcare_app/lib/generated_plugin_registrant.dart
+
+# Test coverage
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# Backup files
+*.bak
+*.backup
