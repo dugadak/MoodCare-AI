@@ -70,6 +70,7 @@ urlpatterns = [
     path('api/v1/emotions/', include('emotions.urls')),
     path('api/v1/stories/', include('stories.urls')),
     path('api/v1/music/', include('music.urls')),
+    path('api/v1/notifications/', include('notifications.urls')),
     
     # Legacy endpoints (for backward compatibility)
     path('api/users/', include('users.urls')),

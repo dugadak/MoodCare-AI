@@ -61,7 +61,23 @@ dependencies:
   fl_chart: ^0.66.0
   
   # Date & Time
-  intl: ^0.18.1
+  intl: ^0.19.0
+  
+  # WebSocket
+  web_socket_channel: ^2.4.0
+  
+  # Offline Support
+  sqflite: ^2.3.0
+  path: ^1.8.3
+  connectivity_plus: ^5.0.2
+  
+  # Security
+  flutter_secure_storage: ^9.0.0
+  
+  # Push Notifications
+  firebase_core: ^2.24.2
+  firebase_messaging: ^14.7.10
+  flutter_local_notifications: ^16.3.0
 
 dev_dependencies:
   flutter_test:

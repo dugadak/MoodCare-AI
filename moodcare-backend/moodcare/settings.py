@@ -45,6 +45,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'corsheaders',
     'rest_framework_simplejwt',
+    'channels',
+    'daphne',
     
     # Local apps
     'users',
@@ -180,3 +182,14 @@ CORS_ALLOW_CREDENTIALS = True
 
 # OpenAI Settings
 OPENAI_API_KEY = config('OPENAI_API_KEY', default='')
+
+# Channels Configuration
+ASGI_APPLICATION = 'moodcare.asgi.application'
+CHANNEL_LAYERS = {
+    'default': {
+        'BACKEND': 'channels_redis.core.RedisChannelLayer',
+        'CONFIG': {
+            "hosts": [(config('REDIS_HOST', default='127.0.0.1'), config('REDIS_PORT', default=6379, cast=int))],
+        },
+    },
+}
