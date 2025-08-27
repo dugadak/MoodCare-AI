@@ -25,7 +25,12 @@
    - 프로젝트 컨텍스트 파일
 
 ### 🔄 진행 중인 작업
-- [ ] API 엔드포인트 실제 구현
+- [x] Emotions API serializers 구현 완료
+- [x] Emotions views 기본 구조 업데이트
+- [x] Stories serializers 구현 완료
+- [x] Stories AI generator 구현 완료
+- [ ] Music views 구현 필요
+- [ ] URL 라우팅 설정
 - [ ] Flutter-Django 연동
 - [ ] WebSocket 실시간 통신
 
