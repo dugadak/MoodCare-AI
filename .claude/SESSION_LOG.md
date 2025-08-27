@@ -107,4 +107,63 @@ flutter pub get
 ```
 
 ---
-Last Updated: 2025-08-27 (Session 2)
+
+## 2025-08-27 세션 3
+### 작업 내용
+1. **Music API 구현**
+   - `music/serializers.py`: 음악 추천 serializers
+   - `music/recommender.py`: AI 음악 추천 엔진
+   - Spotify API 연동 준비
+   - 치료적 음악 카테고리 시스템
+
+2. **URL 라우팅 완성**
+   - `emotions/urls.py`: ViewSet 라우팅 추가
+   - `stories/urls.py`: 스토리 API 라우팅
+   - `music/urls.py`: 음악 API 라우팅
+   - 메인 URLs 업데이트 (v1 API 구조)
+
+3. **API 구조 개선**
+   - RESTful API 패턴 적용
+   - ViewSet 기반 구조로 전환
+   - Custom actions 정의
+
+### 진행 상황
+- 백엔드 Phase 1: 75% 완료
+  - Emotions API: 70%
+  - Stories API: 60%
+  - Music API: 50% (views 미구현)
+  - URL routing: 100% ✅
+  - Authentication: 0%
+
+### 다음 작업
+1. Music views 구현
+2. Stories views 구현
+3. Authentication system (JWT)
+4. Flutter API 서비스 클래스
+5. API 테스트
+
+### 주요 기술 결정
+- Spotify API 통합 (spotipy 라이브러리)
+- 감정-음악 매핑 알고리즘
+- 치료적 음악 카테고리 (7개 타입)
+
+### API 엔드포인트 구조
+```
+/api/v1/
+  ├── auth/        # 인증
+  ├── emotions/    # 감정 분석
+  │   └── records/
+  │       ├── analyze/text/
+  │       ├── analyze/voice/
+  │       └── insights/
+  ├── stories/     # 스토리텔링
+  │   ├── stories/
+  │   └── templates/
+  └── music/       # 음악 추천
+      ├── recommendations/
+      ├── profile/
+      └── diary/
+```
+
+---
+Last Updated: 2025-08-27 (Session 3)

@@ -25,19 +25,53 @@ from rest_framework.response import Response
 @api_view(['GET'])
 @permission_classes([AllowAny])
 def api_root(request):
-    """API Root"""
+    """MoodCare AI API Root"""
     return Response({
-        'message': 'MoodCare API',
+        'message': 'MoodCare AI - Emotional Wellness Platform API',
         'version': '1.0.0',
         'endpoints': {
-            'users': '/api/users/',
-            'emotions': '/api/emotions/',
-        }
+            'auth': {
+                'register': '/api/v1/auth/register/',
+                'login': '/api/v1/auth/login/',
+                'logout': '/api/v1/auth/logout/',
+                'refresh': '/api/v1/auth/refresh/',
+                'profile': '/api/v1/auth/profile/'
+            },
+            'emotions': {
+                'records': '/api/v1/emotions/records/',
+                'analyze_text': '/api/v1/emotions/records/analyze/text/',
+                'analyze_voice': '/api/v1/emotions/records/analyze/voice/',
+                'statistics': '/api/v1/emotions/records/statistics/',
+                'trends': '/api/v1/emotions/records/trends/',
+                'insights': '/api/v1/emotions/records/insights/'
+            },
+            'stories': {
+                'list': '/api/v1/stories/stories/',
+                'generate': '/api/v1/stories/stories/generate/',
+                'templates': '/api/v1/stories/templates/'
+            },
+            'music': {
+                'recommendations': '/api/v1/music/recommendations/',
+                'profile': '/api/v1/music/profile/',
+                'diary': '/api/v1/music/diary/',
+                'therapeutic': '/api/v1/music/therapeutic/'
+            }
+        },
+        'documentation': '/api/docs/',
+        'websocket': 'ws://localhost:8000/ws/'
     })
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', api_root, name='api-root'),
+    
+    # API v1 endpoints
+    path('api/v1/auth/', include('users.urls')),
+    path('api/v1/emotions/', include('emotions.urls')),
+    path('api/v1/stories/', include('stories.urls')),
+    path('api/v1/music/', include('music.urls')),
+    
+    # Legacy endpoints (for backward compatibility)
     path('api/users/', include('users.urls')),
     path('api/emotions/', include('emotions.urls')),
 ]

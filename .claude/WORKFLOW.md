@@ -29,8 +29,12 @@
 - [x] Emotions views 기본 구조 업데이트
 - [x] Stories serializers 구현 완료
 - [x] Stories AI generator 구현 완료
+- [x] Music serializers 구현 완료
+- [x] Music recommender 엔진 구현 완료
+- [x] URL 라우팅 설정 완료
 - [ ] Music views 구현 필요
-- [ ] URL 라우팅 설정
+- [ ] Stories views 구현 필요
+- [ ] Authentication system 구현 필요
 - [ ] Flutter-Django 연동
 - [ ] WebSocket 실시간 통신
 
